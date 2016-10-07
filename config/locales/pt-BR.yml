@@ -1,0 +1,27 @@
+'pt-BR':
+  spree:
+    activemodel:
+      attributes:
+        contact_us/contact:
+          name: "Nome"
+          email: "Email"
+          message: "Mensagem"
+          subject: "Assunto"
+    contact_us_title: "Contato"
+    sent_by_contact_form: "Enviado pelo formulário de contato de %{email}"
+    sent_by_name: "Enviado por %{name} (%{email})"
+    subject: "Contato enviado por %{email}"
+    submit: "Enviar"
+
+    contact_us:
+      notices:
+        success: "Sua mensagem foi enviada com sucesso."
+
+  email_address: "Email"
+  your_comment_here: "Seu comentário aqui" 
+  message: "Mensagem"
+  recaptcha:
+    errors:
+      verification_failed: "Human verification fails"
+      recaptcha_unreachable: "Human verification timeout"
+  contact_term_and_cond: "Eu li e aceito os Termos e Condições e Política de Privacidade"
