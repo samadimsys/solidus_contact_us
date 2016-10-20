@@ -5,7 +5,7 @@ describe Spree::ContactUs::ContactMailer do
   describe "#contact_email" do
 
     before do
-      SpreeContactUs.mailer_to = "contact@please-change-me.com"
+      SolidusContactUs.mailer_to = "contact@please-change-me.com"
       @contact = Spree::ContactUs::Contact.new(:email => 'test@email.com', :message => 'Thanks!')
     end
 
@@ -14,10 +14,10 @@ describe Spree::ContactUs::ContactMailer do
     end
 
     it "should use the ContactUs.mailer_from setting when it is set" do
-      SpreeContactUs.mailer_from = "contact@please-change-me.com"
+      SolidusContactUs.mailer_from = "contact@please-change-me.com"
       @mailer = Spree::ContactUs::ContactMailer.contact_email(@contact)
-      @mailer.from.should eql([SpreeContactUs.mailer_from])
-      SpreeContactUs.mailer_from = nil
+      @mailer.from.should eql([SolidusContactUs.mailer_from])
+      SolidusContactUs.mailer_from = nil
     end
 
     describe "rendered without error" do
@@ -27,7 +27,7 @@ describe Spree::ContactUs::ContactMailer do
       end
 
       it "should have the initializers to address" do
-        @mailer.to.should eql([SpreeContactUs.mailer_to])
+        @mailer.to.should eql([SolidusContactUs.mailer_to])
       end
 
       it "should use the users email in the from field when ContactUs.mailer_from is not set" do

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Spree::ContactUs::ContactsController do
   before(:each) do
-    SpreeContactUs.mailer_to = 'test@example.com'
+    SolidusContactUs.mailer_to = 'test@example.com'
     @contact_attributes = { :email => "Valid@Email.com", :message => "Test" }
   end
 

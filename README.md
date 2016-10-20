@@ -29,12 +29,12 @@ Add to ApplicationHelper:
 
 ## CONFIGURATION
 
-If you would like to add a name or subject field to the form you may simply set the options to true within the spree_contact_us initializer located at `config/initializers/spree_contact_us.rb`:
+If you would like to add a name or subject field to the form you may simply set the options to true within the spree_contact_us initializer located at `config/initializers/solidus_contact_us.rb`:
 
     config.require_name = true
     config.require_subject = true
 
-You may also update your locales under `config/locales/spree_contact_us.en.yml` or create your own.  Please feel free to submit your own locales so that other users will hopefully find this gem more useful.
+You may also update your locales under `config/locales/solidus_contact_us.en.yml` or create your own.  Please feel free to submit your own locales so that other users will hopefully find this gem more useful.
 
 ## USAGE
 

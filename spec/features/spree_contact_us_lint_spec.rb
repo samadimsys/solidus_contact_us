@@ -75,13 +75,13 @@ describe 'Contact Us page', js: true do
   context 'with name and subject configuration' do
 
     after do
-      SpreeContactUs.require_name    = false
-      SpreeContactUs.require_subject = false
+      SolidusContactUs.require_name    = false
+      SolidusContactUs.require_subject = false
     end
 
     before do
-      SpreeContactUs.require_name    = true
-      SpreeContactUs.require_subject = true
+      SolidusContactUs.require_name    = true
+      SolidusContactUs.require_subject = true
       visit spree.contact_us_path
     end
 

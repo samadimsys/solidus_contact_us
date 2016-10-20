@@ -6,7 +6,7 @@ module SolidusContactUs
       source_root File.expand_path('../../templates', __FILE__)
 
       def add_javascripts
-        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/spree_contact_us\n"
+        append_file 'vendor/assets/javascripts/spree/frontend/all.js', "//= require spree/frontend/solidus_contact_us\n"
       end
 
       def copy_initializer_file
@@ -14,7 +14,7 @@ module SolidusContactUs
       end
 
       def add_stylesheets
-        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', "*= require spree/frontend/spree_tobe_contact_us\n", :before => /\*\//, :verbose => true
+        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', "*= require spree/frontend/solidus_tobe_contact_us\n", :before => /\*\//, :verbose => true
       end
 
       def copy_recaptcha_file

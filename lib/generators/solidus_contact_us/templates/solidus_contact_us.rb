@@ -1,6 +1,6 @@
 # Use this initializer to configure the contact mailer.
 
-SpreeContactUs.setup do |config|
+SolidusContactUs.setup do |config|
 
   # ==> Mailer Configuration
 

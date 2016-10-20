@@ -4,49 +4,49 @@ describe SpreeContactUs do
 
   after do
     # Reset to defaults.
-    SpreeContactUs.mailer_from     = nil
-    SpreeContactUs.mailer_to       = 'contact@please-change-me.com'
-    SpreeContactUs.require_name    = false
-    SpreeContactUs.require_subject = false
+    SolidusContactUs.mailer_from     = nil
+    SolidusContactUs.mailer_to       = 'contact@please-change-me.com'
+    SolidusContactUs.require_name    = false
+    SolidusContactUs.require_subject = false
   end
 
   it "should be valid" do
-    SpreeContactUs.should be_a(Module)
+    SolidusContactUs.should be_a(Module)
   end
 
   describe 'setup block' do
     it 'should yield self' do
-      SpreeContactUs.setup do |config|
-        SpreeContactUs.should eql(config)
+      SolidusContactUs.setup do |config|
+        SolidusContactUs.should eql(config)
       end
     end
   end
 
   describe 'mailer_from' do
     it 'should be configurable' do
-      SpreeContactUs.mailer_from = "contact@please-change-me.com"
-      SpreeContactUs.mailer_from.should eql("contact@please-change-me.com")
+      SolidusContactUs.mailer_from = "contact@please-change-me.com"
+      SolidusContactUs.mailer_from.should eql("contact@please-change-me.com")
     end
   end
 
   describe 'mailer_to' do
     it 'should be configurable' do
-      SpreeContactUs.mailer_to = "contact@changed-me.com"
-      SpreeContactUs.mailer_to.should eql("contact@changed-me.com")
+      SolidusContactUs.mailer_to = "contact@changed-me.com"
+      SolidusContactUs.mailer_to.should eql("contact@changed-me.com")
     end
   end
 
   describe 'require_name' do
     it 'should be configurable' do
-      SpreeContactUs.require_name = true
-      SpreeContactUs.require_name.should eql(true)
+      SolidusContactUs.require_name = true
+      SolidusContactUs.require_name.should eql(true)
     end
   end
 
   describe 'require_subject' do
     it 'should be configurable' do
-      SpreeContactUs.require_subject = true
-      SpreeContactUs.require_subject.should eql(true)
+      SolidusContactUs.require_subject = true
+      SolidusContactUs.require_subject.should eql(true)
     end
   end
 
