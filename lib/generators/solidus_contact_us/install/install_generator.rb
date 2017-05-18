@@ -14,7 +14,7 @@ module SolidusContactUs
       end
 
       def add_stylesheets
-        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', "*= require spree/frontend/solidus_tobe_contact_us\n", :before => /\*\//, :verbose => true
+        inject_into_file 'vendor/assets/stylesheets/spree/frontend/all.css', "*= require spree/frontend/solidus_contact_us\n", :before => /\*\//, :verbose => true
       end
 
       def copy_recaptcha_file
