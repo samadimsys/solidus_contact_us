@@ -15,6 +15,7 @@ en:
     sent_by_name: "Sent by %{name} from %{email}"
     subject: "Contact Us message from %{email}"
     submit: "Submit"
+    recaptcha_error: "Oh! It's error with reCAPTCHA!"
 
     contact_us:
       notices:

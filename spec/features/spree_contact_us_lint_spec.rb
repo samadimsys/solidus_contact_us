@@ -4,15 +4,15 @@ describe 'Contact Us page', js: true do
 
   after do
     ActionMailer::Base.deliveries = []
-    SpreeContactUs.mailer_from = nil
-    SpreeContactUs.mailer_to = nil
-    SpreeContactUs.require_name = false
-    SpreeContactUs.require_subject = false
+    SolidusContactUs.mailer_from = nil
+    SolidusContactUs.mailer_to = nil
+    SolidusContactUs.require_name = false
+    SolidusContactUs.require_subject = false
   end
 
   before do
     ActionMailer::Base.deliveries = []
-    SpreeContactUs.mailer_to = 'contact@please-change-me.com'
+    SolidusContactUs.mailer_to = 'contact@please-change-me.com'
   end
 
   it 'displays default contact form properly' do

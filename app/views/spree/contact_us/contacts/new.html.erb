@@ -14,7 +14,7 @@
 
 <h1><%= Spree.t(:contact_us_title) %></h1>
 <%= form_for @contact, :url => contacts_path, :html => { :novalidate => '' } do |f| %>
-  <% if SpreeContactUs.require_name %>
+  <% if SolidusContactUs.require_name %>
     <p>
       <%= f.label :name %>
       <span class="required">*</span><br/>
@@ -26,7 +26,7 @@
     <span class="required">*</span><br/>
     <%= f.email_field :email, class: 'required email' %>
   </p>
-  <% if SpreeContactUs.require_subject %>
+  <% if SolidusContactUs.require_subject %>
     <p>
       <%= f.label :subject %>
       <span class="required">*</span><br/>

@@ -3,8 +3,8 @@ class Spree::ContactUs::ContactsController < Spree::StoreController
   helper "spree/products"
   def create
     @contact = Spree::ContactUs::Contact.new(params[:contact_us_contact])
-
-    if @contact.save
+    status = verify_recaptcha(:model => @post, :message => "Oh! It's error with reCAPTCHA!")
+    if status && @contact.save
       if Spree::ContactUs::Config.contact_tracking_message.present?
         flash[:contact_tracking] = Spree::ContactUs::Config.contact_tracking_message
       end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe SpreeContactUs do
+describe SolidusContactUs do
 
   after do
     # Reset to defaults.

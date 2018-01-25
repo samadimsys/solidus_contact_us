@@ -15,12 +15,13 @@ es:
     sent_by_name: "Enviado por %{name} desde %{email}"
     subject: "Mensaje de contacto desde %{email}"
     submit: "Enviar"
+    recaptcha_error: "Oh! Se ha producido un error con reCAPTCHA!"
 
     contact_us:
       notices:
         success: "El mensaje de contacto se ha enviado correctamente."
 
-  email_address: "Dirección Mail"
+  email_address: "Dirección de email"
   your_comment_here: "Escriba su comentario aquí"
   message: "Mensaje"  
   recaptcha:
