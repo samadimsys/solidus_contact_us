@@ -1,11 +1,11 @@
 module Spree
   module ContactUs
     class Contact
-
+      # enum contact_type: [:contact_normal, :contact_business, :contact_corporate]
       include ActiveModel::Conversion
       include ActiveModel::Validations
 
-      attr_accessor :email, :message, :name, :subject, :phone
+      attr_accessor :email, :message, :name, :subject, :phone, :contact_type, :company_name, :web_site, :billing_address, :shipping_address, :interested_products, :reason
 
       EMAIL_REGEX = /\A
         [^\s@]+ # non-at-sign characters, at least one
@@ -24,7 +24,7 @@ module Spree
       validates :subject, :presence => {:if => Proc.new{SolidusContactUs.require_subject}}
 
       def initialize(attributes = {})
-        [:email, :message, :name, :subject, :phone].each do |attribute|
+        [:email, :message, :name, :subject, :phone, :contact_type, :company_name, :web_site, :billing_address, :shipping_address, :interested_products, :reason].each do |attribute|
           self.send("#{attribute}=", attributes[attribute]) if attributes and attributes.has_key?(attribute)
         end
       end
